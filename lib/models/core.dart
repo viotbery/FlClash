@@ -7,6 +7,20 @@ part 'generated/core.freezed.dart';
 part 'generated/core.g.dart';
 
 @freezed
+abstract class DownloadResult with _$DownloadResult {
+  const factory DownloadResult({
+    required String name,
+    required int bytes,
+    required int duration,
+    required double bytesPerSecond,
+    @Default('') String error,
+  }) = _DownloadResult;
+
+  factory DownloadResult.fromJson(Map<String, dynamic> json) =>
+      _$DownloadResultFromJson(json);
+}
+
+@freezed
 abstract class SetupParams with _$SetupParams {
   const factory SetupParams({
     @JsonKey(includeIfNull: false) SetupBase? base,

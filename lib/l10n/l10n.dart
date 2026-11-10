@@ -9072,6 +9072,96 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Download speed test`
+  String get downloadSpeedTest {
+    return Intl.message(
+      'Download speed test',
+      name: 'downloadSpeedTest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select nodes to test sequentially through Cloudflare. Each test uses a single connection for up to 8 seconds or 50 MiB. Results are average download speeds to this server.`
+  String get downloadSpeedTestDescription {
+    return Intl.message(
+      'Select nodes to test sequentially through Cloudflare. Each test uses a single connection for up to 8 seconds or 50 MiB. Results are average download speeds to this server.',
+      name: 'downloadSpeedTestDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{count} selected`
+  String downloadTestSelected(Object count) {
+    return Intl.message(
+      '$count selected',
+      name: 'downloadTestSelected',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `{completed}/{total} finished`
+  String downloadTestProgress(Object completed, Object total) {
+    return Intl.message(
+      '$completed/$total finished',
+      name: 'downloadTestProgress',
+      desc: '',
+      args: [completed, total],
+    );
+  }
+
+  /// `Queued`
+  String get downloadTestQueued {
+    return Intl.message(
+      'Queued',
+      name: 'downloadTestQueued',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Testing…`
+  String get downloadTestRunning {
+    return Intl.message(
+      'Testing…',
+      name: 'downloadTestRunning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Test failed`
+  String get downloadTestFailed {
+    return Intl.message(
+      'Test failed',
+      name: 'downloadTestFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancelled`
+  String get downloadTestCancelled {
+    return Intl.message(
+      'Cancelled',
+      name: 'downloadTestCancelled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stopping…`
+  String get downloadTestStopping {
+    return Intl.message(
+      'Stopping…',
+      name: 'downloadTestStopping',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

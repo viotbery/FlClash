@@ -9,6 +9,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'tab.dart';
+import 'download_test.dart';
 
 class ProxiesView extends ConsumerStatefulWidget {
   const ProxiesView({super.key, this.picker = false});
@@ -162,6 +163,15 @@ class _ProxiesViewState extends ConsumerState<ProxiesView> {
       primaryAction: primaryAction,
       searchActions: [?primaryAction],
       iconActions: [
+        if (!picker)
+          IconButtonData(
+            glyph: AppGlyphs.arrowDown,
+            tooltip: context.appLocalizations.downloadSpeedTest,
+            onPressed: () => showSheet<void>(
+              context: context,
+              builder: (_) => const DownloadTestView(),
+            ),
+          ),
         if (_isTab && !picker)
           IconButtonData(
             glyph: AppGlyphs.locate,

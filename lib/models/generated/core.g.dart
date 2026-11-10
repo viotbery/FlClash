@@ -6,6 +6,24 @@ part of '../core.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+_DownloadResult _$DownloadResultFromJson(Map<String, dynamic> json) =>
+    _DownloadResult(
+      name: json['name'] as String,
+      bytes: (json['bytes'] as num).toInt(),
+      duration: (json['duration'] as num).toInt(),
+      bytesPerSecond: (json['bytesPerSecond'] as num).toDouble(),
+      error: json['error'] as String? ?? '',
+    );
+
+Map<String, dynamic> _$DownloadResultToJson(_DownloadResult instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'bytes': instance.bytes,
+      'duration': instance.duration,
+      'bytesPerSecond': instance.bytesPerSecond,
+      'error': instance.error,
+    };
+
 _SetupParams _$SetupParamsFromJson(Map<String, dynamic> json) => _SetupParams(
   base: json['base'] == null
       ? null

@@ -37,6 +37,14 @@ class _RecordingCoreHandler extends CoreHandlerInterface {
     calls[method] = arguments;
     return switch (method) {
       CoreMethod.coreInitialized => true,
+      CoreMethod.proxyStartDownload => 'session-1',
+      CoreMethod.proxyTestDownload => {
+        'name': 'node',
+        'bytes': 1024,
+        'duration': 1000,
+        'bytesPerSecond': 1024.0,
+        'error': '',
+      },
       CoreMethod.trafficCurrent ||
       CoreMethod.trafficTotal => {'up': 12, 'down': 34},
       CoreMethod.proxyTestDelay => {
@@ -230,6 +238,18 @@ void main() {
 
   test('core interface sends structured request parameters', () async {
     final handler = _RecordingCoreHandler();
+
+    final session = await handler.startDownloadTests();
+    final download = await handler.testDownload(session, 'node');
+    await handler.cancelDownloadTests(session);
+    expect(download.bytesPerSecond, 1024);
+    expect(handler.calls[CoreMethod.proxyTestDownload], {
+      'session': 'session-1',
+      'name': 'node',
+    });
+    expect(handler.calls[CoreMethod.proxyCancelDownload], {
+      'session': 'session-1',
+    });
 
     await handler.init(const InitParams(homeDir: '/tmp/flclash', version: 35));
     await handler.setupConfig(

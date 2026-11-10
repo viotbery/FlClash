@@ -1076,5 +1076,14 @@
   "fakeipFilterDesc": "これらのドメインには Fake-IP ではなく実際の IP を返します。whitelist モードでは、これらだけが Fake-IP を使います。",
   "fallbackFilterGeositeDesc": "これらの GeoSite カテゴリのドメインは、直接 Fallback で解決します。",
   "fallbackFilterIpcidrDesc": "Nameserver がこれらの範囲の IP を返したときは、Fallback の結果を使います。",
-  "fallbackFilterDomainDesc": "これらのドメインは、直接 Fallback で解決します。"
+  "fallbackFilterDomainDesc": "これらのドメインは、直接 Fallback で解決します。",
+  "downloadSpeedTest": "ダウンロード速度テスト",
+  "downloadSpeedTestDescription": "ノードを選択し、Cloudflare 経由で順番に測定します。各テストは単一接続で最大 8 秒または 50 MiB まで実行します。結果はこのサーバーへの平均ダウンロード速度です。",
+  "downloadTestSelected": "{count} 個選択中",
+  "downloadTestProgress": "{completed}/{total} 完了",
+  "downloadTestQueued": "待機中",
+  "downloadTestRunning": "測定中…",
+  "downloadTestFailed": "測定失敗",
+  "downloadTestCancelled": "キャンセル済み",
+  "downloadTestStopping": "停止中…"
 }

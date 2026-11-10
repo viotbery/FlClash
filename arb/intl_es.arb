@@ -1076,5 +1076,14 @@
   "fakeipFilterDesc": "Estos dominios reciben su IP real en lugar de una Fake-IP. En modo whitelist, solo ellos reciben Fake-IP.",
   "fallbackFilterGeositeDesc": "Los dominios de estas categorías GeoSite se resuelven directamente con Fallback.",
   "fallbackFilterIpcidrDesc": "Si Nameserver devuelve una IP de estos rangos, se usa la respuesta de Fallback.",
-  "fallbackFilterDomainDesc": "Estos dominios se resuelven directamente con Fallback."
+  "fallbackFilterDomainDesc": "Estos dominios se resuelven directamente con Fallback.",
+  "downloadSpeedTest": "Prueba de velocidad de descarga",
+  "downloadSpeedTestDescription": "Selecciona nodos para probarlos uno a uno mediante Cloudflare. Cada prueba usa una conexión durante un máximo de 8 segundos o 50 MiB. El resultado es la velocidad media de descarga desde este servidor.",
+  "downloadTestSelected": "{count} seleccionados",
+  "downloadTestProgress": "{completed}/{total} completados",
+  "downloadTestQueued": "En cola",
+  "downloadTestRunning": "Probando…",
+  "downloadTestFailed": "Prueba fallida",
+  "downloadTestCancelled": "Cancelado",
+  "downloadTestStopping": "Deteniendo…"
 }

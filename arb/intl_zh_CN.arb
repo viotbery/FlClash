@@ -1076,5 +1076,14 @@
   "fakeipFilterDesc": "这些域名不使用 Fake-IP，返回真实 IP；过滤模式为 whitelist 时则只有它们使用 Fake-IP。",
   "fallbackFilterGeositeDesc": "属于这些 GeoSite 分类的域名直接使用 Fallback 解析。",
   "fallbackFilterIpcidrDesc": "Nameserver 返回这些网段内的 IP 时，改用 Fallback 的结果。",
-  "fallbackFilterDomainDesc": "这些域名直接使用 Fallback 解析。"
+  "fallbackFilterDomainDesc": "这些域名直接使用 Fallback 解析。",
+  "downloadSpeedTest": "下载测速",
+  "downloadSpeedTestDescription": "勾选节点后逐个通过 Cloudflare 测速。每个节点使用单连接下载，最多采样 8 秒或下载 50 MiB。结果为到该服务器的平均下载速度。",
+  "downloadTestSelected": "已选择 {count} 个节点",
+  "downloadTestProgress": "已完成 {completed}/{total}",
+  "downloadTestQueued": "等待测速",
+  "downloadTestRunning": "测速中…",
+  "downloadTestFailed": "测速失败",
+  "downloadTestCancelled": "已取消",
+  "downloadTestStopping": "正在停止…"
 }

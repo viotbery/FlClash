@@ -100,6 +100,19 @@ abstract class CoreHandlerInterface {
 
   Future<void> forceGc() => _command(CoreMethod.coreGc);
 
+  Future<String> startDownloadTests() =>
+      _query(CoreMethod.proxyStartDownload, _cast<String>);
+
+  Future<DownloadResult> testDownload(String session, String name) => _query(
+    CoreMethod.proxyTestDownload,
+    _model(DownloadResult.fromJson),
+    arguments: {'session': session, 'name': name},
+    timeout: const Duration(seconds: 35),
+  );
+
+  Future<void> cancelDownloadTests(String session) =>
+      _command(CoreMethod.proxyCancelDownload, arguments: {'session': session});
+
   Future<CoreMemoryStats> getMemoryStats() {
     return _query(CoreMethod.coreMemory, _model(CoreMemoryStats.fromJson));
   }
